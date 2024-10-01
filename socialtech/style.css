@@ -1,0 +1,421 @@
+/*  全スタイル共通*/
+*{box-sizing: border-box}
+p {font-size: 15px;}
+body { font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
+}
+/*body要素*/
+body{max-width: 1080px;
+margin:0 auto 0 auto;
+}
+/*ヘッダーのロゴと文字の並び*/
+header{display: flex;
+justify-content: space-between;
+}
+/*ナビゲーション*/
+#nav-pc{font-size: 14px;
+
+}
+#nav-pc ul{display: flex;
+    padding: 0;}
+#nav-pc ul li{list-style: none;}
+
+/*ナビゲーションの詳細設定*/
+#nav-pc a{text-decoration: none;
+margin-left: 20px;
+color:#0d0d0d ;}
+#nav-pc a:hover{text-decoration: underline;}
+
+/*メイン画面*/
+#main-visual{position: relative;
+height: 470px;}
+
+/*メインメッセージ*/
+#main-massage{position: absolute;
+top: 0;
+left: 0;
+background-color:#2710d5 ;
+color:#ffffff ;
+border-radius: 0 0 476px 0 ;
+max-width: 620px;
+width: 100%;
+height: 100%;
+z-index: 11;}
+
+/*メッセージの文字*/
+#main-massage h1 {font-size: 60px;
+margin: 100px 0 0 50px;}
+#main-massage p {font-size: 28px;
+margin: 0 0 0 50px;}
+
+/* メイン画面の写真*/
+#main-visual img {
+    max-width: 620px;
+    border-radius: 476px 0 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+
+/*見出し*/
+h2{margin-top: 40px;
+}
+h2::after{content: url("images/line.png");
+    margin-left: 10px;}
+  h3{font-size: 27px;}  
+
+  /*セクション全*/
+  #mission{ margin: 80px auto 80px auto;}
+
+  #mission-flex{display: flex;
+}
+
+/*2つの画像配置*/
+#mission-flex>div{width: 50%;
+margin: 20px;}
+
+/*左画像配置*/
+#mission-photo{width: 100%;}
+/*右画像配置*/
+#s2dgs{width: 100%;}
+
+
+/*プロダクト*/
+/*セクション全体*/
+#product{background-color: #fafafa;
+margin: 80px 0 80px 0 ;
+padding: 10px 40px 0px 40px;
+}
+/*4つの要素の設定*/
+.product-flex{margin-top: 40px;
+display: flex;
+}
+/*左要素*/
+#product-left{width: 50%;
+margin: right 20px;}
+
+/*右要素*/
+#product-right{width: 50%;
+    margin-left: 20px;
+    margin-top: 80px;}
+
+  #product-left > div{position: relative;
+       height: 480px;
+       margin-right: 20px;}
+
+  #product-right > div{position: relative;
+height: 480px;
+margin-left: 20px;}
+
+/*画像*/
+.product-photo{width: 100%;}
+
+
+.product-explain{background-color: #ffffff;
+position: absolute;
+left: 0;
+bottom: 50px;
+margin: 0 40px 0 40px;
+padding: 20px;
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-explain > span{color: #2710d5;
+font-weight: bold;
+font-size: 16px;
+margin: 0;}
+
+.product-explain > h3 {margin: 5px 0 5px 0;
+}
+
+.product-explain > p{font-size: 14px;
+margin: 0;}
+
+/*もっと見るサイン*/
+
+#product-more{text-align: center;
+}
+#product-more a
+{ position: relative;
+    bottom: -42px;}
+
+
+ /*アバウトアス*/
+ #aboutus{margin: 80px auto bopx auto;
+}
+ #culture-box{display: flex;}
+ /*画像*/
+ .culture-img {
+ width: 50%;
+    align-self: flex-start;}
+
+ .culture-img2{margin-top: 50px;
+width: 100%;}
+
+/*表の構成*/
+.culture-table{margin-right: 50px;
+}
+.culture-num{font-size: 80px;
+color: #2710d5;
+padding: 0 20px 0 0 ;}
+.culture-table th{text-align: left;
+font-size: 28px;
+font-weight: bold;}
+.culture-en{color: #2710d5;
+font-size: 24px;}
+.culture-discription{margin-top: 0;}
+
+/*ビジョン*/
+/*セクション全体*/
+#vision{margin: 80px auto 80px auto;
+}
+#vision-flex{display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.vision-box {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 30px;
+    position: relative;}
+
+
+/*画像たち*/
+.vission-box>img{width: 100%;
+position: relative;
+z-index: 30;}
+
+.vision-box>div{position: absolute;
+z-index: 31;
+top: 0;
+left: 0;
+margin-right: 20px;}
+
+/*英語見出し*/
+.vision-box > div > h4{color: #2710d5;
+font-size: 19px;
+margin: 80px 0 0 0;}
+
+.vision-box > div > h4::first-letter {
+    font-size: 40px;}
+
+/*日本語見出し*/
+.vision-box>div>h5{font-size: 20px;
+margin: 0 0 0 0;}
+
+/*説明文*/
+.vision-box>div>p{margin: 10px 0 0 0 ;
+}
+
+/*会社概要*/
+/*セクション全体*/
+#company{margin: 80px auto 80px auto;
+}
+/*表全体*/
+#company-table{width: 100%;}
+/*2行目以降見出し*/
+.company-1{text-align: left;
+padding: 20px;
+border-bottom: #2710d5;
+border-bottom-width: 1px;
+border-bottom-style: solid;
+}
+
+/*１行目*/
+.company-1f{border-top: #2710d5;
+border-top-width: 1px;
+border-top-style:solid;}
+
+/*内容*/
+/*2行目以降内容*/
+.company-2{padding: 30px;
+border-bottom-color:#ececec;
+border-bottom-width:1px;
+border-bottom-style:solid;}
+/*1行目内容*/
+.company-2f{border-top:#ececec;
+    border-top-width:1px;
+    border-top-style:solid;}
+
+/*Googleマップ*/
+#companyIframe {
+    width: 100%;
+    height: 368px;
+    margin-top: 40px;
+  }
+
+
+  /*コンタクトページ*/
+
+   /*セクション全体*/
+  #contact{margin: 80px auto 80px auto;}
+
+  /*横の一列コンテナ設定*/
+  #contact > form > div {display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+padding-bottom: 30px;
+}
+
+ /*フォームのラベル*/
+.midashi{width: 240px;
+align-self: center;
+}
+.contact-label{font-weight: bold;}
+
+.contact-span{color:#ce2222 ;
+margin-left: 20px;
+font-weight: bold;}
+
+
+/*テキストボックスとエリア*/
+.contact-textbox{border-top: 0;
+border-left: 0;
+border-right: 0;
+border-bottom-width: 1px;
+border-bottom-color: #707070;
+border-style: solid;
+background-color: #fafafa;
+width: 400px;
+height: 56px;}
+
+textarea{border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-color: #707070;
+    border-style: solid;
+    border-bottom-width: 1px;
+    background-color: #fafafa;
+    width: 400px;
+    height: 200px;
+}
+
+/*  個人情報欄*/
+#contact dt {
+    font-weight: bold;
+  }
+  
+  #contact dd {
+    margin: 0 0 16px 0;
+  }
+  
+  #contact dd p {
+    margin: 0;
+  }
+  
+  #contact dd ul {
+    padding-left: 0;
+  }
+  
+  #contact dd li {
+    margin-bottom: 0;
+    list-style: none;
+  }
+
+
+ /*  フッター全体とロゴ画像*/ 
+  footer{background-color: #0d0d0d;
+text-align: center;
+padding: 80px 80px 30px 80px;
+}
+#footer-logo{margin-bottom: 30px;}
+#footer-link {
+    margin-bottom: 50px;
+  }
+  
+  #footer-link > a {
+    text-decoration: none;
+    margin: 10px;
+    color: #ffffff;
+  }
+  
+  #footer-link > a:hover {
+    text-decoration: underline;
+  }
+
+  /*  SNS全体とコピーライト*/ 
+  #sns-footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  #sns-footer a {
+    margin-right: 30px;
+  }
+  
+  #copyright { color: #ffffff;
+    margin: 0;
+  }
+
+/* 画面幅が767px以下のとき */
+@media screen and (max-width: 767px) {
+    /* スマートフォン用のスタイルを指定する */
+    /* PC用ナビゲーション非表示 */
+    #nav-pc {
+      display: none;
+  }
+   /* ハンバーガーメニュー */
+   #menu-sp {
+    display: block;
+    background-color: transparent;
+    float: right;
+    padding: 0;
+    border: none;
+  }
+
+  /* スマホ用ナビゲーションの表示切替*/
+  /* 初期状態、レイアウトと非表示設定 */
+  #nav-sp {
+    background-color: #2710d5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    z-index: 100;
+  }
+  /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  #nav-sp nav ul {
+    padding-left: 0;
+  }
+
+  #nav-sp nav li {
+    list-style: none;
+  }
+
+  /* ナビゲーションメニュー用ロゴ */
+  #logo-sp {
+    margin: 80px 0 30px 20px;
+  }
+  /* ナビゲーションのリンクの装飾設定 */
+  #nav-sp nav a {
+    display: block;
+    color: #ffffff;
+  }
+ 
+  #nav-sp nav a:hover {
+     text-decoration: underline;
+   }
+ 
+   #nav-sp .menu {
+     text-decoration: none;
+     margin: 0 20px 0 20px;
+     height: 44px;
+     font-size: 16px;
+     background-image: url("images/arrow.png");
+     background-repeat: no-repeat;
+     background-position: right top;
+   } 
+  }
