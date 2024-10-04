@@ -1,40 +1,52 @@
 /*  全スタイル共通*/
 *{box-sizing: border-box}
 p {font-size: 15px;}
-body { font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
-}
+
+  
 /*body要素*/
 body{max-width: 1080px;
-margin:0 auto 0 auto;
+margin: 0 auto 0 auto;
+font-family: "Source Sans Pro", "Hiragino Kaku Gothic ProN", Meiryo, Arial, sans-serif;
 }
+
 /*ヘッダーのロゴと文字の並び*/
 header{display: flex;
 justify-content: space-between;
 }
 /*ナビゲーション*/
 #nav-pc{font-size: 14px;
-
 }
 #nav-pc ul{display: flex;
-    padding: 0;}
-#nav-pc ul li{list-style: none;}
+  padding-left: 0;}
+
+#nav-pc li {list-style: none;}
+
 
 /*ナビゲーションの詳細設定*/
 #nav-pc a{text-decoration: none;
 margin-left: 20px;
 color:#0d0d0d ;}
+
 #nav-pc a:hover{text-decoration: underline;}
+
+ /* スマホ用ナビを非表示 */
+ #nav-sp,
+ #menu-sp {
+   display: none;}
+
+
+
 
 /*メイン画面*/
 #main-visual{position: relative;
-height: 470px;}
+height: 400px;}
 
 /*メインメッセージ*/
 #main-massage{position: absolute;
 top: 0;
 left: 0;
-background-color:#2710d5 ;
-color:#ffffff ;
+background-color:#2710d5;
+color:#ffffff;
 border-radius: 0 0 476px 0 ;
 max-width: 620px;
 width: 100%;
@@ -44,11 +56,12 @@ z-index: 11;}
 /*メッセージの文字*/
 #main-massage h1 {font-size: 60px;
 margin: 100px 0 0 50px;}
-#main-massage p {font-size: 28px;
+
+#main-massage > p {font-size: 28px;
 margin: 0 0 0 50px;}
 
 /* メイン画面の写真*/
-#main-visual img {
+#main-visual >img {
     max-width: 620px;
     border-radius: 476px 0 0 0;
     position: absolute;
@@ -63,9 +76,10 @@ h2{margin-top: 40px;
 }
 h2::after{content: url("images/line.png");
     margin-left: 10px;}
-  h3{font-size: 27px;}  
 
-  /*セクション全*/
+ h3{font-size: 27px;}  
+
+  /*missionセクション全*/
   #mission{ margin: 80px auto 80px auto;}
 
   #mission-flex{display: flex;
@@ -78,7 +92,8 @@ margin: 20px;}
 /*左画像配置*/
 #mission-photo{width: 100%;}
 /*右画像配置*/
-#s2dgs{width: 100%;}
+#s2dgs{margin-top: 50px;
+  width: 100%;}
 
 
 /*プロダクト*/
@@ -88,12 +103,12 @@ margin: 80px 0 80px 0 ;
 padding: 10px 40px 0px 40px;
 }
 /*4つの要素の設定*/
-.product-flex{margin-top: 40px;
-display: flex;
-}
+#product .product-flex {margin-top: 40px;
+display: flex;}
+
 /*左要素*/
 #product-left{width: 50%;
-margin: right 20px;}
+margin-right:  20px;}
 
 /*右要素*/
 #product-right{width: 50%;
@@ -142,7 +157,7 @@ margin: 0;}
 
 
  /*アバウトアス*/
- #aboutus{margin: 80px auto bopx auto;
+ #aboutus{margin: 80px auto 80px auto;
 }
  #culture-box{display: flex;}
  /*画像*/
@@ -159,12 +174,15 @@ width: 100%;}
 .culture-num{font-size: 80px;
 color: #2710d5;
 padding: 0 20px 0 0 ;}
+
 .culture-table th{text-align: left;
 font-size: 28px;
 font-weight: bold;}
+
 .culture-en{color: #2710d5;
 font-size: 24px;}
-.culture-discription{margin-top: 0;}
+
+.culture-discription{margin: 0;}
 
 /*ビジョン*/
 /*セクション全体*/
@@ -183,7 +201,7 @@ font-size: 24px;}
 
 
 /*画像たち*/
-.vission-box>img{width: 100%;
+.vision-box>img{width: 100%;
 position: relative;
 z-index: 30;}
 
@@ -211,39 +229,47 @@ margin: 0 0 0 0;}
 
 /*会社概要*/
 /*セクション全体*/
-#company{margin: 80px auto 80px auto;
-}
-/*表全体*/
-#company-table{width: 100%;}
-/*2行目以降見出し*/
-.company-1{text-align: left;
-padding: 20px;
-border-bottom: #2710d5;
-border-bottom-width: 1px;
-border-bottom-style: solid;
+#company {
+  margin: 80px auto 80px auto;
 }
 
-/*１行目*/
-.company-1f{border-top: #2710d5;
-border-top-width: 1px;
-border-top-style:solid;}
-
-/*内容*/
-/*2行目以降内容*/
-.company-2{padding: 30px;
-border-bottom-color:#ececec;
-border-bottom-width:1px;
-border-bottom-style:solid;}
-/*1行目内容*/
-.company-2f{border-top:#ececec;
-    border-top-width:1px;
-    border-top-style:solid;}
+  #company-table {
+    width: 100%;
+  }
+  
+  .tableheader {
+    text-align: left;
+    padding: 20px;
+    border-bottom-color: #2710d5;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 100px;
+  }
+  
+  .tableheader-first {
+    border-top-color: #2710d5;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
+  
+  .cell {
+    padding: 30px;
+    border-bottom-color: #ececec;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+  
+  .cell-first {
+    border-top-color: #ececec;
+    border-top-width: 1px;
+    border-top-style: solid;
+  }
 
 /*Googleマップ*/
-#companyIframe {
-    width: 100%;
-    height: 368px;
-    margin-top: 40px;
+#company > iframe {
+  width: 100%;
+  height: 368px;
+  margin-top: 40px;
   }
 
 
@@ -260,20 +286,20 @@ padding-bottom: 30px;
 }
 
  /*フォームのラベル*/
-.midashi{width: 240px;
+.contact-heading{width: 240px;
 align-self: center;
 }
 .contact-label{font-weight: bold;}
 
 .contact-span{color:#ce2222 ;
-margin-left: 20px;
+  margin: 0 0 0 20px;
 font-weight: bold;}
 
 
 /*テキストボックスとエリア*/
-.contact-textbox{border-top: 0;
-border-left: 0;
-border-right: 0;
+.contact-textbox{border-top: 0px;
+border-left: 0px;
+border-right: 0px;
 border-bottom-width: 1px;
 border-bottom-color: #707070;
 border-style: solid;
@@ -281,9 +307,9 @@ background-color: #fafafa;
 width: 400px;
 height: 56px;}
 
-textarea{border-top: 0;
-    border-left: 0;
-    border-right: 0;
+.contact-textarea{border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
     border-bottom-color: #707070;
     border-style: solid;
     border-bottom-width: 1px;
@@ -321,6 +347,7 @@ text-align: center;
 padding: 80px 80px 30px 80px;
 }
 #footer-logo{margin-bottom: 30px;}
+
 #footer-link {
     margin-bottom: 50px;
   }
@@ -350,15 +377,21 @@ padding: 80px 80px 30px 80px;
     margin: 0;
   }
 
-/* 画面幅が767px以下のとき */
+
+
+
+  
+/*====================
+ スマートフォン用のスタイル
+=====================*/
 @media screen and (max-width: 767px) {
-    /* スマートフォン用のスタイルを指定する */
-    /* PC用ナビゲーション非表示 */
-    #nav-pc {
-      display: none;
+  /* PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
   }
-   /* ハンバーガーメニュー */
-   #menu-sp {
+
+  /* ハンバーガーメニュー */
+  #menu-sp {
     display: block;
     background-color: transparent;
     float: right;
@@ -378,6 +411,7 @@ padding: 80px 80px 30px 80px;
     display: none;
     z-index: 100;
   }
+
   /* ×ボタン */
   #close {
     position: absolute;
@@ -399,23 +433,269 @@ padding: 80px 80px 30px 80px;
   #logo-sp {
     margin: 80px 0 30px 20px;
   }
+
   /* ナビゲーションのリンクの装飾設定 */
   #nav-sp nav a {
     display: block;
     color: #ffffff;
   }
- 
+
   #nav-sp nav a:hover {
-     text-decoration: underline;
-   }
- 
-   #nav-sp .menu {
-     text-decoration: none;
-     margin: 0 20px 0 20px;
-     height: 44px;
-     font-size: 16px;
-     background-image: url("images/arrow.png");
-     background-repeat: no-repeat;
-     background-position: right top;
-   } 
+    text-decoration: underline;
   }
+
+  #nav-sp .menu {
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+    height: 44px;
+    font-size: 16px;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  #sns {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  #sns > a {
+    margin-right: 30px;
+  }
+
+  /* メインビジュアル */
+  #main-visual {
+    position: relative;
+    height: 470px;
+  }
+
+  #main-visual > div {
+    text-align: center;
+    height: 280px;
+  }
+
+  #main-visual h1 {
+    font-size: 28px;
+    margin: 90px 0 0 0;
+  }
+
+  #main-visual > div > p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  #main-visual > img {
+    width: 100%;
+    border-radius: 476px 0 0 0;
+    top: auto;
+    bottom: 0;
+  }
+
+  /*見出し*/
+  h2 {
+    margin: 15px 0 15px 0;
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+  }
+
+  /* ミッション */
+  #mission {
+    margin: 20px 0 20px 0;
+    padding: 0 20px 0 20px;
+  }
+
+  #mission-flex {
+    flex-direction: column;
+  }
+
+  #mission-flex > div {
+  width: 100%;
+  margin: 0;
+}
+
+  /* プロダクト */
+  #product {
+    margin: 0;
+    padding: 10px 20px 0 20px;
+  }
+
+  /* 外枠 */
+  #product .product-flex {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  /* 左右のカラム　スマホでは縦並び */
+  #product-left,
+  #product-right {
+    width: 100%;;
+    margin: 0;
+  }
+
+  /* 写真＋説明の枠 */
+  #product-left > div,
+  #product-right > div {
+    height: auto;
+    margin: 0;
+  }
+
+  /* 説明文の枠 */
+  .product-explain {
+    position: relative;
+    margin: 0;
+  }
+
+  .product-explain > h3 {
+    margin: 10px 0 10px 0;
+    font-size: 24px;
+  }
+
+  /* もっと見るボタン */
+  #product-more {
+    text-align: left;
+  }
+
+  /* ABOUT US */
+  #aboutus {
+    margin: 80px 20px 80px 20px;
+  }
+
+  #aboutus > div {
+    flex-direction: column;
+  }
+
+  .culture-table th {
+    font-size: 16px;
+  }
+
+  .culture-table {
+    margin-right: 0;
+    padding-right: 20px;
+    order: 2;
+  }
+
+  .culture-img {
+    width: 100%;
+    order: 1;
+  }
+
+  .culture-img2 {
+    margin-top: 0;
+  }
+
+  .culture-num {
+    padding: 0;
+  }
+
+  .culture-description {
+    margin: 0;
+  }
+
+  /* ビジョン */
+  #vision {
+    margin: 80px 20px 80px 20px;
+  }
+
+  .vision-box > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .vision-box > div > h4 {
+    margin: 60px 0 0 0;
+  }
+
+  /*会社概要*/
+  
+  #company {
+    margin: 0px 20px 0px 20px;
+  }
+
+  #company > h3 {
+    margin-bottom: 20px;
+  }
+
+  .tableheader {
+    width: 50px;
+  }
+
+  .cell {
+    padding: 20px;
+  }
+
+  #company > iframe {
+    
+    height: 240px;
+    
+  }
+  
+  
+
+  /* お問い合わせ */
+  #contact {
+    margin: 80px 20px 80px 20px;
+  }
+
+  #contact > h3 {
+    margin-bottom: 20px;
+  }
+
+  #contact > form > div {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .contact-heading {
+    align-self: auto;
+    margin-bottom: 20px;
+  }
+
+  .contact-textbox {
+    min-width: 300px;
+    width: 100%;
+  }
+
+  .contact-textarea {
+    height: 150px;
+    width: 100%;
+  }
+
+  .radiobutton {
+    margin-bottom: 20px;
+  }
+
+  /* フッター */
+  footer {
+    padding: 30px 20px 50px 20px;
+    text-align: left;
+  }
+
+  #footer-link > a {
+    margin: 0 20px 30px 0;
+    display: block;
+    background-image: url("images/arrow.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+  }
+
+  #footer-link > a:hover {
+    text-decoration: underline;
+  }
+
+  #sns-footer {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #copyright {
+    font-size: 12px;
+    margin-top: 30px;
+  }
+}
+
+
